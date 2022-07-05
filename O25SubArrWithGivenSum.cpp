@@ -22,10 +22,10 @@ vector<int> subarrwithSum(vector<int>v,int sum)
     int start=0,cur_sum=v[0];
     for(int i=1;i<n;i++)
     {
-        if(cur_sum>sum && start<i-1)
+        if(cur_sum>sum && start<i-1)//1, 4, 20, 3, 10, 5      33
         {
             cur_sum-=v[start];
-            start++;
+            start++;//for starting point
         }
         if(cur_sum==sum)
             return {start,i-1};
