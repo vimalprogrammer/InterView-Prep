@@ -9,7 +9,7 @@ int lengthOfLongestSubstring(string s)
     int newStart=0,longnonRep=0;
     for(int i=0;i<n;i++)
     {
-        if(mp[s[i]]!=0)
+        if(mp.count(s[i])!=0)
             newStart=max(newStart,mp[s[i]]+1);
         mp[s[i]]=i;
         
